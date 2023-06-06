@@ -1,1 +1,3 @@
-console.log("testing app.js is linked to html")
+const app = Vue.createApp()
+
+app.mount("#app")
