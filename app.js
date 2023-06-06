@@ -3,9 +3,16 @@ const app = Vue.createApp({
     return {
         type: "Contrast",
         name: "Doomfire Magenta",
-        colour: "Purple"
+        colour: "Purple",
+        owned: "No"
+
     };
   },
+  methods: {
+    changeOwned () {
+        this.owned = "Yes"
+    }
+  }
 });
 
 app.mount("#app");
