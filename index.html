@@ -14,9 +14,14 @@
         <h2>{{ colour }}</h2>
         <p>{{ type }}</p>
         <div v-if="owned">
-          <p>{{ owned }}</p>
+          <p>{{ collected }}</p>
          </div>
-        <button @click="changeOwned()">Mark as collected</button>
+
+
+        <button @click="changeOwned()">
+            <span v-if="!owned">Mark as collected</span>
+            <span v-else>Mark as uncollected</span>
+        </button>
     </div?>    
 
     <script src="app.js"></script>
