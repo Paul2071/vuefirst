@@ -1,5 +1,11 @@
 const app = Vue.createApp({
-    template: "<h1>This is the template</h1>"
-})
+  data() {
+    return {
+        type: "Contrast",
+        name: "Doomfire Magenta",
+        colour: "Purple"
+    };
+  },
+});
 
-app.mount("#app")
+app.mount("#app");
