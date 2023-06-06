@@ -4,13 +4,14 @@ const app = Vue.createApp({
         type: "Contrast",
         name: "Doomfire Magenta",
         colour: "Purple",
-        owned: "No"
+        owned: false,
+        
 
     };
   },
   methods: {
     changeOwned () {
-        this.owned = "Yes"
+        this.owned = "collected"
     }
   }
 });

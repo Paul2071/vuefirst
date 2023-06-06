@@ -13,9 +13,11 @@
         <h1>{{ name }} </h1>
         <h2>{{ colour }}</h2>
         <p>{{ type }}</p>
-        <p>{{ owned }}</p>
-        <button @click="changeOwned()">Mark as owned</button>
-    </div>    
+        <div v-if="owned">
+          <p>{{ owned }}</p>
+         </div>
+        <button @click="changeOwned()">Mark as collected</button>
+    </div?>    
 
     <script src="app.js"></script>
 </body>
