@@ -9,13 +9,13 @@ const app = Vue.createApp({
         paints: [
           { type: "Contrast",
           name: "Doomfire Magenta",
-          colour: "Purple" },
+          colour: "Purple", img: 'images/PaintMagenta.png' },
           { type: "Contrast",
           name: "Striking Scorpion Green",
-          colour: "Green" },
+          colour: "Green", img: 'images/PaintStriking.png' },
           { type: "Contrast",
           name: "Flesh tearer red",
-          colour: "Red" }
+          colour: "Red", img: 'images/PaintFlesh.png' }
         ]
         
 

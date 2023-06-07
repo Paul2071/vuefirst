@@ -26,6 +26,7 @@
         
       <ul>
         <li v-for="paint in paints">
+            <img :src="paint.img" :alt="paint.name">
             <h1>{{ paint.name }}</h1>
             <h3> {{ paint.type }}  </h3> 
             <h3> {{ paint.colour }}  </h3> 
