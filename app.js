@@ -4,26 +4,31 @@ const app = Vue.createApp({
       type: "Contrast",
       name: "Doomfire Magenta",
       colour: "Purple",
-        owned: false,
+      owned: false,
+
         collected: "Collected",
         paints: [
           { type: "Contrast",
           name: "Doomfire Magenta",
-          colour: "Purple", img: 'images/PaintMagenta.png' },
+          colour: "Purple", img: 'images/PaintMagenta.png', isOwned: true },
+
           { type: "Contrast",
           name: "Striking Scorpion Green",
-          colour: "Green", img: 'images/PaintStriking.png' },
+          colour: "Green", img: 'images/PaintStriking.png', isOwned: false   },
+
           { type: "Contrast",
           name: "Flesh tearer red",
-          colour: "Red", img: 'images/PaintFlesh.png' }
+          colour: "Red", img: 'images/PaintFlesh.png', isOwned: true }
         ]
         
 
     };
   },
   methods: {
-    changeOwned () {
-        this.owned = !this.owned
+    changeOwned (paint) {
+      console.log(paint.isOwned)
+        paint.isOwned = !paint.isOwned
+        this.owned =  !this.owned
     }
   }
 });
