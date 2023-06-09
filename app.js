@@ -30,6 +30,11 @@ const app = Vue.createApp({
         paint.isOwned = !paint.isOwned
         this.owned =  !this.owned
     }
+  },
+  computed: {
+    filteredPaints () {
+      return this.paints.filter( (paint)=> paint.isOwned )
+    }
   }
 });
 

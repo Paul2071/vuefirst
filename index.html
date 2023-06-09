@@ -47,6 +47,7 @@
          </div>
 
          
+        
          <ul>
              <li v-for="paint in paints" :class="{ owned: paint.isOwned}">
                  <h1>{{ paint.name }}</h1>
@@ -59,10 +60,26 @@
                              <span v-else>Mark as collected</span>
                          </button>
                  
-        </li>
-     </ul>
-    
-        
+                         
+                      
+             </li>
+             <li v-for="paint in filteredPaints" :class="{ owned: paint.isOwned}">
+                 <h1>filter {{ paint.name }}</h1>
+                 <img :src="paint.img" :alt="paint.name">
+                 <h3> {{ paint.type }}  </h3> 
+                 <h3> {{ paint.colour }}  </h3> 
+                 
+                         <button @click="changeOwned(paint)">
+                             <span v-if="!owned">Mark as uncollected</span>
+                             <span v-else>Mark as collected</span>
+                         </button>
+                 
+                         
+                      
+             </li>
+
+
+            </ul>
 
     </div>    
 

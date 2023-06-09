@@ -1,0 +1,1 @@
+a note on syntax - v-bind: can be shortened to : and v-onclick can be shortened to @click etc
